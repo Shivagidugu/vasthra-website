@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <title>Vasthra | Ecommerce Website</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;800&family=Poppins:wght@200;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/Vasthralogo.png" width="200px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="Account.html">Account</a></li>
+                </ul>
+            </nav>
+           <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+            <img src="images/menu.png"  class="menu-icon" onclick="menutoggle()" width="30px" height="30px">
+        </div>
+    </div>
+    <!---account page-->
+    <div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/image1.png" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()" >Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="Indicator">
+                    </div>
+                    <form id="LoginForm">
+                        <input type="text" placeholder="User Id">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">forgot password</a>
+                    </form>
+                    <form id="RegForm">
+                        <input type="email" placeholder="Email">
+                        <input type="text" placeholder="User Id">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+
+
+<!----footer-->
+<div class="footer">
+    <div class="small-container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download our app</h3>
+                <p>Download our app for android and ios mobile</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png">
+                    <img src="images/app-store.png">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/Vasthralogo.png" background="black">
+                <p>we deliever all your needs...</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>coupns</li>
+                    <li>Blog post</li>
+                    <li>Return policy</li>
+                    <li>join Affilate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+
+         </div>
+         <hr>
+        <p class="copyright">Copyright-Vasthra clothing</p>
+    </div>
+</div>
+<script>
+    var MenuItems= document.getElementById("MenuItems");
+    MenuItems.style.maxHeight="0px";
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px"){
+            MenuItems.style.maxHeight = "200px";
+        }
+        else{
+            MenuItems.style.maxHeight="0px";
+        }
+    }
+    </script>
+    <script>
+        var LoginForm=document.getElementById("LoginForm");
+        var RegForm= document.getElementById("RegForm");
+        var Indicator=document.getElementById("Indicator");
+        function register(){
+            RegForm.style.transform= "translateX(0px)";
+            LoginForm.style.transform= "translateX(0px)";
+            Indicator.style.transform= "translateX(100px)";
+
+        }
+        function login(){
+            RegForm.style.transform= "translateX(300px)";
+            LoginForm.style.transform= "translateX(300px)";
+            Indicator.style.transform= "translateX(0px)";
+
+        }
+
+    </script>
+        </body>
+</html>
